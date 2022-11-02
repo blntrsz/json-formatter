@@ -10,7 +10,7 @@ function App() {
       setJson(JSON.parse(e.target.value));
       setError("");
     } catch (e) {
-      setError(e.message as string);
+      setError((e as { message: string }).message);
     }
   };
 
